@@ -6,6 +6,7 @@ import Effect4 from "./Effect4";
 import Effect5 from "./Effect5";
 import Effect6 from "./Effect6";
 import Effect7 from "./Effect7";
+import Reducer1 from "./Reducer1";
 
 export default function App(){
   return (
@@ -16,8 +17,9 @@ export default function App(){
       <Effect4/>
       <Effect5/> */}
       {/* <Effect6/> */}
-      <Effect7/>
-      <DarkMode/>
+      {/* <Effect7/> */}
+      {/* <DarkMode/> */}
+      <Reducer1/>
     </div>
   )
 }
