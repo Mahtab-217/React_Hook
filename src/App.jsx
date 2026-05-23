@@ -9,14 +9,16 @@ import Effect7 from "./Effect7";
 import Reducer1 from "./Reducer1";
 import Reducer2 from "./Reducer2";
 import Reducer3 from "./Reducer3";
+import Reducer4 from "./Reducer4";
 
 export default function App(){
   return (
     <div>
     
-      <Reducer1/>
-      <Reducer2/>
+      {/* <Reducer1/>
+      <Reducer2/> */}
       <Reducer3/>
+      <Reducer4/>
     </div>
   )
 }
