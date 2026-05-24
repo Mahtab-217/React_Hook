@@ -10,7 +10,8 @@ function Reducer4() {
     }
  const [ todos, dispatch]=   useReducer(myFunc, todoList);
   return (
-    <div className='w-full  max-e-6xl mx-auto'>
+    <div className='w-full  max-x-6xl mx-auto'>
+        <h1 className='text-4xl font-bold text-center font-serif'>Reducer4</h1>
         <AddTodo todos={todos} dispatch={dispatch}/>
         <div className=' p-5 grid grid-cols-2 gap-4 h-'>
             {todos.map((x)=>{
