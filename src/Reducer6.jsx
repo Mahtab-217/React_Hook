@@ -1,36 +1,46 @@
-import React, { useEffect, useReducer } from 'react'
+import React, { useEffect, useReducer, useState } from 'react'
 const products=[
     {
         name: "Apple PC",
-        price: "10000"
+        price: 10000
     },
     {
         name: "HP PC",
-        price: "20000"
+        price: 20000
     },
     {
         name: "Dell PC",
-        price: "30000"
+        price: 30000
     },
 
 ]
+
+
 function Reducer6() {
-   const [data, action]= useReducer(myFunction, products);
-   let totalPrice=0;
-  useEffect(()=>{
-    const totalPrice=data.reduce((total, y)=>{
-        return (total += y.price);
-    },0);
-  },[data])
+    const [data, action]= useReducer(myFunction, products);
+    const [totalPrice, setTotalPricde]= useState(0);
+    const [qimat, setQimat]= useState(0);
+    const [name, setName]= useState("");
+    useEffect(()=>{
+        setTotalPricde(data.reduce((total, y)=>{
+            return (total += y.price);
+        },0));
+    },[data])
+    function handleClick(){
+        action({payload: {name: name, price: qimat}})
+    }
   return (
     <div>
-        <input type="text" />
+        <input onChange={(e)=>setName(e.target.value)} className='py-2 border rounded-md mx-3 px-3' type="text" placeholder='Name' />
+        <input onChange={(e)=>setQimat(+e.target.value)} className='py-2 border rounded-md mx-3 px-3' type="number" placeholder='Price' />
+        <button className='border rounded-md bg-green-800 py-2 px-8 text-white' onClick={(handleClick)}>Save</button>
+       
         <div className='p-5 grid grid-cols-3 gap-8'>
             {data.map((y,index)=>{
                 return (
                     <div key={index} className='p-5 border rounded-sm'>
-                        <h1 className='text-green-700'>{y.name}</h1>
-                        <p className={` "text-bold" ${y.price < 15000? "text-green-700": "text-red-700"}`}> {y.price} AFG</p>
+                        <h1 className='text-green-900 text-2xl'>{y.name}</h1>
+                        <p className={` "font-bold" ${y.price < 15000? "text-green-700": "text-red-700"}`}> {y.price} AFG</p>
                     </div>
                 )
             })}
@@ -42,5 +52,5 @@ function Reducer6() {
 
 export default Reducer6
 function myFunction(data, action){
-
+return [...data, action.payload]
 }
