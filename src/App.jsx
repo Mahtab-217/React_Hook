@@ -11,6 +11,7 @@ import Reducer2 from "./Reducer2";
 import Reducer3 from "./Reducer3";
 import Reducer4 from "./Reducer4";
 import Reducer5 from "./Reducer5";
+import Reducer6 from "./Reducer6";
 
 export default function App(){
   return (
@@ -21,6 +22,7 @@ export default function App(){
       {/* <Reducer3/> */}
       {/* <Reducer4/> */}
       <Reducer5/>
+      <Reducer6/>
     </div>
   )
 }
