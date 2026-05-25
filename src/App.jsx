@@ -1,3 +1,4 @@
+import { Library } from "lucide-react";
 import Effect1 from "./components/Effect1";
 import Effect2 from "./components/Effect2";
 import DarkMode from "./DarkMode";
@@ -23,6 +24,7 @@ export default function App(){
       {/* <Reducer4/> */}
       <Reducer5/>
       <Reducer6/>
+      <Library/>
     </div>
   )
 }
