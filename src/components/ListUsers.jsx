@@ -2,7 +2,20 @@ import React from 'react'
 
 function ListUsers() {
   return (
-    <div>ListUsers</div>
+    <div>
+        <table>
+            <tr>
+                <th>
+                  Name
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    Ali
+                </td>
+            </tr>
+        </table>
+    </div>
   )
 }
 
